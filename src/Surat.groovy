@@ -5,14 +5,17 @@ import groovy.xml.MarkupBuilder
  */
 
 class Surat {
-    String toText
-    String fromText
-    String body
+    Boolean HEADER
+    Boolean TANGGAL
+    Boolean FOOTER
+    Boolean ISI
+    Boolean PENERIMA
+    Boolean PENUTUP
+    Boolean PENGIRIM
     String pengirimText
     String penerimaText
     String prihalText
     String penutupText
-    def sections = []
 
     /**
      * This method accepts a closure which is essentially the DSL. Delegate the closure methods to
@@ -29,16 +32,25 @@ class Surat {
     /**
      * Store the parameter as a variable and use it later to output a memo
      */
-    def to(String toText) {
-        this.toText = toText
-    }
 
     def pengirim(String pengirimText){
-        this.pengirimText = pengirimText;
+        this.PENGIRIM = pengirimText;
     }
 
-    def penerima(String pengirimText){
-        this.penerimaText = pengirimText;
+    def penerima(String penerimaText){
+        this.PENERIMA = penerimaText;
+    }
+    def header(String headerText){
+        this.HEADER = headerText;
+    }
+    def footer(String footerText){
+        this.FOOTER = footerText;
+    }
+    def tanggal(String tanggalText){
+        this.TANGGAL = tanggalText;
+    }
+    def isi(String isiText){
+        this.ISI = isiText;
     }
 
     def prihal(String pengirimText){
@@ -49,13 +61,6 @@ class Surat {
         this.penutupText = pengirimText;
     }
 
-    def from(String fromText) {
-        this.fromText = fromText
-    }
-
-    def body(String bodyText) {
-        this.body = bodyText
-    }
 
     def getHtml() {
         doHtml(this)
@@ -79,23 +84,51 @@ class Surat {
                 }
                 body {
                     form(method: 'post', action: 'surat-maker/enginetest.php') {
+                        if(surat.HEADER){
+                            br()
+                            label("Header")
+                            br()
+                            input(type: 'text', name: 'header')
+
+                        }
+                        if(surat.TANGGAL){
+                            br()
+                            label("Tanggal")
+                            br()
+                            input(type: '[ada tipe tanggal ga?]', name: 'tanggal')
+                        }
+                        if(surat.PENERIMA){
+                            br()
+                            label("Penerima")
+                            br()
+                            input(type: 'text', name: 'penerima')
+                        }
+                        if(surat.ISI){
+                            br()
+                            label("Isi")
+                            br()
+                            input(type: 'text', name: 'isi')
+                        }
+                        if(surat.PENUTUP){
+                            br()
+                            label("Penutup")
+                            br()
+                            input(type: 'text', name: 'penutup')
+                        }
+                        if(surat.TANGGAL){
+                            br()
+                            label("Tanggal")
+                            br()
+                            input(type: 'text', name: 'tanggal')
+                        }
+                        if(surat.FOOTER){
+                            br()
+                            label("Footer")
+                            br()
+                            input(type: 'text', name: 'footer')
+                        }
                         br()
-                        input(type: 'hidden', name: 'pengirim', value: surat.pengirimText)
-                        label("nama")
-                        br()
-                        input(type: 'text', name: 'nama')
-                        br()
-                        label("nim")
-                        br()
-                        input(type: 'text', name: 'nim')
-                        br()
-                        label("Program Studi")
-                        br()
-                        input(type: 'text', name: 'prodi')
-                        br()
-                        label("kontribusi")
-                        br()
-                        input(type: 'text', name: 'kontribusi')
+                        label("Submit")
                         br()
                         input(type: 'submit', value: 'submit')
                     }
@@ -121,19 +154,17 @@ class Surat {
         template += "\$mailMerge = new Zend_Service_LiveDocx_MailMerge();\n"
         template += "\$mailMerge->setUsername(DEMOS_ZEND_SERVICE_LIVEDOCX_USERNAME)"
         template += "->setPassword(DEMOS_ZEND_SERVICE_LIVEDOCX_PASSWORD);"
-
-        if (memoDsl.prihalText == "SKPI"){
-            template += "\$mailMerge->setLocalTemplate('skpi.docx');\n"
+            template += "\$mailMerge->setLocalTemplate('temp-surat.docx');\n"
             template += "\$nama = \$_POST['nama'];\n"
             template += "\$nim = \$_POST['nim'];\n"
             template += "\$prodi = \$_POST['prodi'];\n"
             template += "\$pengirim = \$_POST['pengirim'];\n"
             template += "\$kontribusi = \$_POST['kontribusi'];\n"
-            template += "\$mailMerge->assign('nama',  \$nama);\n"
-            template += "\$mailMerge->assign('nim',  \$nim);\n"
-            template += "\$mailMerge->assign('prodi',  \$prodi);\n"
-            template += "\$mailMerge->assign('PENGIRIM',  \$pengirim . \"\\n  huhuhuaasas\");\n"
-            template += "\$mailMerge->assign('kontribusi',  \$kontribusi);\n"
+            template += "\$mailMerge->assign('HEADER',  \$nama);\n"
+            template += "\$mailMerge->assign('PENERIMA',  \$nim);\n"
+            template += "\$mailMerge->assign('TANGGAL',  \$prodi);\n"
+            template += "\$mailMerge->assign('ISI',  \$pengirim . \"\\n  huhuhuaasas\");\n"
+            template += "\$mailMerge->assign('PENGIRIM',  \$kontribusi);\n"
             template += "\$mailMerge->createDocument();\n"
             template += "\$document = \$mailMerge->retrieveDocument('pdf');\n"
             template += "file_put_contents('document.pdf', \$document);\n"
@@ -142,7 +173,6 @@ class Surat {
             template += "?>\n"
             template += "<br><br>"
             template += "Download di <a href='document.pdf'>sini</a>"
-        }
         String filename = "C:/xampp/htdocs/surat-maker/enginetest.php"
         def surats = new File(filename)
         PrintWriter printWriter = new PrintWriter(surats)

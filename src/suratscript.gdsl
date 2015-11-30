@@ -9,6 +9,18 @@ def hahah = Surat.make {
     html
 }
 
+def huhu = Surat.make {
+    pengirim 1
+    penerima 1
+    header 1
+    footer 1
+    penutup 1
+    tanggal 1
+    isi 1
+
+    html
+}
+
 def hai = Surat.make {
     pengirim "KM-ITB"
     penerima "husain 2"

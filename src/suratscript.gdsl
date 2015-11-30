@@ -1,30 +1,14 @@
 /**
  * Created by emhah on 11/30/2015.
  */
-def hahah = Surat.make {
-    pengirim "KM-ITB"
-    penerima "husain 2"
-    prihal "SKPI"
-    penutup "TerimaKasih"
-    html
-}
 
 def huhu = Surat.make {
-    pengirim 1
-    penerima 1
-    header 1
-    footer 1
-    penutup 1
-    tanggal 1
-    isi 1
-
-    html
-}
-
-def hai = Surat.make {
-    pengirim "KM-ITB"
-    penerima "husain 2"
-    prihal "SKPI"
-    penutup "TerimaKasih"
-    text
+    pengirim true
+    penerima true
+    header true
+    footer true
+    penutup true
+    tanggal true
+    isi true
+    surat
 }

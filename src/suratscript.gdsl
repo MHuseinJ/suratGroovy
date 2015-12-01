@@ -5,8 +5,8 @@
 def huhu = Surat.make {
     pengirim true
     penerima true
-    header true
-    footer true
+    header false
+    footer false
     penutup true
     tanggal true
     isi true

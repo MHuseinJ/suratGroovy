@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8084a94-4aad-4f65-a5bf-8ee81e5a654b" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GroovyTest/Surat$_doHtml_closure1$_closure2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GroovyTest/Surat$_doHtml_closure1$_closure3$_closure4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GroovyTest/Surat$_doHtml_closure1$_closure3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GroovyTest/Surat$_doHtml_closure1.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GroovyTest/Surat.class" afterPath="$PROJECT_DIR$/out/production/GroovyTest/Surat.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Surat.groovy" afterPath="$PROJECT_DIR$/src/Surat.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GroovyTest/suratscript.gdsl" afterPath="$PROJECT_DIR$/out/production/GroovyTest/suratscript.gdsl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/suratscript.gdsl" afterPath="$PROJECT_DIR$/src/suratscript.gdsl" />
     </list>
     <ignored path="GroovyTest.iws" />
@@ -27,10 +32,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Surat.groovy" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Surat.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Surat.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.1361257">
+            <state vertical-scroll-proportion="0.0">
               <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
               <folding />
             </state>
@@ -57,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="suratscript.gdsl" pinned="false" current-in-tab="false">
+      <file leaf-file-name="suratscript.gdsl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/suratscript.gdsl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.037037">
-              <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.09577465">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="13" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -83,8 +88,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/test.html" />
-        <option value="$PROJECT_DIR$/src/suratscript.gdsl" />
         <option value="$PROJECT_DIR$/src/Surat.groovy" />
+        <option value="$PROJECT_DIR$/src/suratscript.gdsl" />
       </list>
     </option>
   </component>
@@ -622,7 +627,7 @@
       <option name="number" value="Default" />
       <updated>1448859547494</updated>
       <workItem from="1448859559398" duration="3009000" />
-      <workItem from="1448862649345" duration="19070000" />
+      <workItem from="1448862649345" duration="22640000" />
     </task>
     <task id="LOCAL-00001" summary="initial push">
       <created>1448880193591</created>
@@ -636,11 +641,17 @@
       <option name="project" value="LOCAL" />
       <updated>1448889008529</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fixed Method of DSL">
+      <created>1448891825203</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1448891825203</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22079000" />
+    <option name="totallyTimeSpent" value="25649000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -684,7 +695,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial push" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial push" />
+    <MESSAGE value="Fixed Method of DSL" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Method of DSL" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -727,18 +739,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/suratscript.gdsl">
+    <entry file="file://$PROJECT_DIR$/src/Surat.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.037037">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Surat.groovy">
+    <entry file="file://$PROJECT_DIR$/src/suratscript.gdsl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.1361257">
-          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.09577465">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="13" selection-end-column="1" />
           <folding />
         </state>
       </provider>

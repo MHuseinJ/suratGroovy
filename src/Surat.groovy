@@ -64,7 +64,7 @@ class Surat {
         StringWriter writer = new StringWriter()
         MarkupBuilder xml = new MarkupBuilder(writer)
 
-        String filename = "C:/xampp/htdocs/test.html"
+        String filename = "C:/xampp/htdocs/surat-maker/test.html"
         def surats = new File(filename)
         PrintWriter printWriter = new PrintWriter(surats)
         xml.html() {
@@ -72,7 +72,7 @@ class Surat {
                 title("Simple Mail Maker")
             }
             body {
-                form(method: 'post', action: 'surat-maker/enginetest.php') {
+                form(method: 'post', action: 'enginetest.php') {
                     if(surat.HEADER){
                         br()
                         label("Header")

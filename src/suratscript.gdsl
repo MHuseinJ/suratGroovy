@@ -3,12 +3,12 @@
  */
 
 def huhu = Surat.make {
-    pengirim true
+    pengirim false
     penerima true
     header false
     footer false
-    penutup true
-    tanggal true
+    penutup false
+    tanggal false
     isi true
     surat
 }
